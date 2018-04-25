@@ -58,7 +58,7 @@ class UsersController extends Controller
 
     }
 
-    protected function sendEmailConfirmationto($user)
+    protected function sendEmailConfirmationTo($user)
     {
         $view = 'emails.confirm';
         $data = compact('user');
@@ -69,6 +69,7 @@ class UsersController extends Controller
             $message->to($to)->subject($subject);
         });
     }
+
 
     public function edit(User $user)
     {
